@@ -1,0 +1,149 @@
+
+
+
+[
+{ "keys": ["ctrl+shift+."], "command": "insert_snippet", "args": {"contents": "<%=$0 %>"}
+},
+{ "keys": ["i","j"], "command": "exit_insert_mode",
+"context":
+[
+{ "key": "setting.command_mode", "operand": false },
+{ "key": "setting.is_widget", "operand": false }
+]
+},
+
+{ "keys": ["i","j"], "command": "exit_visual_mode",
+"context":
+[
+{ "key": "setting.command_mode"},
+{ "key": "num_selections", "operand": 1},
+{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+]
+},
+
+{ "keys": ["i","j"], "command": "hide_auto_complete", "context":
+[
+{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+]
+},
+
+{ "keys": ["tab", "c"], "command": "close",
+"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+},
+
+{ "keys": ["tab", "q"], "command": "close",
+"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+},
+
+{ "keys": ["tab", "o"], "command": "set_layout",
+"args":
+{
+"cols": [0.0, 1.0],
+"rows": [0.0, 1.0],
+"cells": [[0, 0, 1, 1]]
+},
+"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+},
+
+{ "keys": ["tab", "s"], "command": "set_layout",
+"args":
+{
+"cols": [0.0, 1.0],
+"rows": [0.0, 0.5, 1.0],
+"cells": [[0, 0, 1, 1], [0, 1, 1, 2]]
+},
+"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+},
+
+{ "keys": ["tab", "v"], "command": "set_layout",
+"args":
+{
+"cols": [0.0, 0.5, 1.0],
+"rows": [0.0, 1.0],
+"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+},
+"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+},
+
+{ "keys": ["alt+j"], "command": "set_motion", "args": {
+"motion": "move",
+"motion_args": {"by": "lines", "times":10,"forward": true, "extend":true }},
+"inclusive": true ,
+"context": [{"key": "setting.command_mode"}]
+},
+
+{ "keys": ["alt+l"], "command": "set_motion", "args": {
+"motion": "vi_move_to_hard_eol",
+"motion_args": {"repeat": 1, "extend": true},
+"inclusive": true,
+"clip_to_line": true },
+"context": [{"key": "setting.command_mode"}]
+},
+
+{ "keys": ["alt+h"], "command": "set_motion", "args": {
+"motion": "vi_move_to_first_non_white_space_character",
+"motion_args": {"extend": true },
+"clip_to_line": true },
+"context": [{"key": "setting.command_mode"}]
+},
+
+{ "keys": ["f","j"], "command": "set_motion", "args": {
+"motion": "vi_move_to_brackets",
+"motion_args": {"repeat": 1},
+"inclusive": true },
+"context": [{"key": "setting.command_mode"}]
+},
+{ "keys": ["enter"], "command": "run_macro_file", "args": {
+"file": "Packages/Default/Add Line.sublime-macro"},
+"context": [{"key": "setting.command_mode"}]
+},
+{ "keys": ["tab","h"], "command": "focus_group", "args": {
+"group": 0 },
+"context": [{"key": "setting.command_mode"}]
+},
+{ "keys": ["tab","l"], "command": "focus_group", "args": {
+"group": 1 },
+"context": [{"key": "setting.command_mode"}]
+},
+{"keys": ["alt+k"], "command": "scroll_lines", "args": {"amount": 20.0}, "context": [{ "key": "setting.command_mode" }]},
+{"keys": ["alt+j"], "command": "scroll_lines", "args": {"amount": -20.0}, "context": [{"key": "setting.command_mode"}]},
+
+// { "keys": ["alt+j"], "command": "set_motion", "args": {
+// "motion": "move",
+// "motion_args": {"by": "pages", "forward": true, "extend": true }},
+// "context": [{"key": "setting.command_mode"}]
+// },
+// { "keys": ["alt+k"], "command": "set_motion", "args": {
+// "motion": "move",
+// "motion_args": {"by": "pages", "forward": false, "extend": true }},
+// "context": [{"key": "setting.command_mode"}]
+// },
+{"keys": ["ctrl+r"], "command": "node_run",
+"context":
+[
+{ "key": "setting.command_mode"},
+{ "key": "num_selections", "operand": 1}
+]
+},
+{"keys": ["ctrl+d"], "command": "node_drun",
+"context":
+[
+{ "key": "setting.command_mode"},
+{ "key": "num_selections", "operand": 1}
+]
+},
+{"keys": ["ctrl+alt+r"], "command": "node_run_arguments",
+"context":
+[
+{ "key": "setting.command_mode"},
+{ "key": "num_selections", "operand": 1}
+]
+},
+{"keys": ["ctrl+alt+d"], "command": "node_drun_arguments",
+"context":
+[
+{ "key": "setting.command_mode"},
+{ "key": "num_selections", "operand": 1}
+]
+}
+]

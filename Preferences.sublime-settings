@@ -1,0 +1,41 @@
+{
+	"auto_complete": false,
+	"auto_complete_delay": 500,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
+	"caret_extra_width": 1,
+	"caret_style": "solid",
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"default_encoding": "UTF-8",
+	"draw_centered": false,
+	"find_selected_text": true,
+	"font_size": 13,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+	],
+	"indent_guide_options":
+	[
+		"draw_active	"
+	],
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
+	"match_brackets": true,
+	"match_brackets_angle": true,
+	"open_files_in_new_window": false,
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"show_encoding": false,
+	"spell_check": false,
+	"tab_size": 2,
+	"theme": "Devastate.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"use_simple_full_screen": true,
+	"vintage_start_in_command_mode": true,
+	"wide_caret": true,
+	"word_wrap": false
+}
